@@ -43,7 +43,7 @@ class Enrollment(models.Model):
     grade = models.CharField(max_length=2, blank=True, null=True)
 
     class Meta:
-        unique_together = ('student', 'course')  # prevent duplicates
+        unique_together = ('student', 'course')  
 
     def __str__(self):
         return f"{self.student.name} → {self.course.course_code}"
